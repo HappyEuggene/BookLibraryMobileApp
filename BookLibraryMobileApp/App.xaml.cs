@@ -1,4 +1,6 @@
-﻿namespace BookLibraryMobileApp
+﻿using Microsoft.Maui.Controls;
+
+namespace BookLibraryMobileApp
 {
     public partial class App : Application
     {

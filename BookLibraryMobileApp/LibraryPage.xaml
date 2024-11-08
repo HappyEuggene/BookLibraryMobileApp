@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookLibraryMobileApp.LibraryPage"
+             Title="Library"
+             BackgroundColor="White">
+
+    <StackLayout Padding="10" Spacing="20">
+        <!-- Кнопки фільтрації -->
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Show All Books" Clicked="OnShowAllBooksClicked" WidthRequest="150" HeightRequest="40" />
+            <Button Text="Older Than 10 Years" Clicked="OnShowOlderBooksClicked" WidthRequest="150" HeightRequest="40" />
+        </HorizontalStackLayout>
+
+        <!-- Відсоток відібраних книг -->
+        <Label x:Name="PercentageLabel"
+               Text="Selected books: 0%"
+               FontSize="14"
+               HorizontalOptions="Center"
+               TextColor="LightBlue" />
+
+        <!-- Список книг -->
+        <CollectionView x:Name="BooksCollectionView" SelectionMode="Single" SelectionChanged="OnBookSelected">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" Orientation="Vertical">
+                        <Label Text="{Binding Title}" FontSize="18" FontAttributes="Bold" />
+                        <Label Text="{Binding Author}" FontSize="14" TextColor="Gray" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

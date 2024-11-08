@@ -3,13 +3,8 @@
     x:Class="BookLibraryMobileApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BookLibraryMobileApp"
-    Shell.FlyoutBehavior="Disabled"
     Title="BookLibraryMobileApp">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent Title="Library" ContentTemplate="{DataTemplate local:LibraryPage}" Route="LibraryPage" />
+    <ShellContent Title="Author" ContentTemplate="{DataTemplate local:AuthorDetailsPage}" Route="AuthorDetailsPage" />
 
 </Shell>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BookLibraryMobileApp.AuthorDetailsPage"
+             Title="Author Details"
+             BackgroundColor="White">
+    <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+        <Image Source="author_photo.jpg" HeightRequest="200" WidthRequest="200" Aspect="AspectFill" />
+        <Label Text="Eugene Somkin" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10,0,0" />
+        <Label Text="4th year student of KNU, TTP-42" FontSize="18" HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>

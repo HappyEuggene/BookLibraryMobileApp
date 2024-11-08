@@ -2,37 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BookLibraryMobileApp.MainPage"
-             Title="Book Library">
+             BackgroundColor="White">
 
-    <StackLayout Padding="10">
-        <Label Text="Book Library"
-               FontSize="24"
-               HorizontalOptions="Center"
-               VerticalOptions="Start"
-               Padding="10"
-               Style="{StaticResource Headline}"/>
+    <StackLayout Padding="10" Spacing="20" VerticalOptions="Center">
+        <Label Text="Book Library" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
 
-        <ListView x:Name="BooksListView"
-                  VerticalOptions="FillAndExpand"
-                  HasUnevenRows="True">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10">
-                            <Label Text="{Binding Title}" 
-                                   FontSize="20"
-                                   FontAttributes="Bold" />
-                            <Label Text="{Binding Author}" 
-                                   FontSize="16"
-                                   TextColor="Gray" />
-                            <Label Text="{Binding YearOfPublication, StringFormat='Year: {0}'}"
-                                   FontSize="14"
-                                   TextColor="DarkGray" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="View Library" 
+                    Clicked="OnViewLibraryClicked" 
+                    WidthRequest="150" 
+                    HeightRequest="50" />
+            <Button Text="Author Details" 
+                    Clicked="OnAuthorDetailsClicked" 
+                    WidthRequest="150" 
+                    HeightRequest="50" />
+        </HorizontalStackLayout>
     </StackLayout>
-
 </ContentPage>
